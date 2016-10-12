@@ -1,0 +1,8 @@
+1. 打开软件和更新,选中universe安装源
+2. 开个shell，为了方便进入root
+   sudo su - root
+3. 挂载dev到/mnt/lfs
+   mkdir /mnt/lfs;mount /dev/sda4 /mnt/lfs
+4. 安装缺失的library
+   apt install bison gawk m4 texinfo
+   
