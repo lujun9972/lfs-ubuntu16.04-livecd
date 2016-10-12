@@ -5,4 +5,12 @@
    mkdir /mnt/lfs;mount /dev/sda4 /mnt/lfs
 4. 安装缺失的library
    apt install bison gawk m4 texinfo
-   
+5. 切换到lfs
+   groupadd lfs
+   useradd -s /bin/bash -g lfs -m -k /dev/null lfs
+   passwd lfs
+   chown -v lfs $LFS/tools
+   chown -v lfs $LFS/sources 
+   # 按照手册创建.bash_profile与.bash_rc
+   su - lfs
+6. 按手册编辑tools
